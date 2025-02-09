@@ -1,0 +1,17 @@
+{
+  "name": "Outlook extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Enhances Outlook UI and auto-categorizes emails.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://outlook.office.com/mail/*"],
+  "content_scripts": [
+      {
+          "matches": ["https://outlook.office.com/mail/*"],
+          "js": ["content.js"],
+          "css": ["styles.css"]
+      }
+  ]
+  
+}
+    
